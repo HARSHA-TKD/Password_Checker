@@ -1,148 +1,37 @@
-🔐 Password Strength Checker
+"Python" (https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+"Security" (https://img.shields.io/badge/Cybersecurity-Password%20Analysis-00BFFF?style=for-the-badge)
+"Tests" (https://img.shields.io/badge/Tests-Unittest-2E8B57?style=for-the-badge)
+"Status" (https://img.shields.io/badge/Status-Learning%20Project-708090?style=for-the-badge)
 
-🛡️ A Python-Based Cybersecurity Project
-
-A lightweight, beginner-friendly password analysis tool that evaluates basic password characteristics, identifies selected common patterns, and provides actionable suggestions to improve password strength.
-
-Built as part of my Cybersecurity Internship at CodeOrbit.
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Language-Python%203-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3"/>
-  <img src="https://img.shields.io/badge/Category-Cybersecurity-0B6E99?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Cybersecurity"/>
-  <img src="https://img.shields.io/badge/Level-Beginner-2E8B57?style=for-the-badge" alt="Beginner level"/>
-  <img src="https://img.shields.io/badge/Dependencies-None-lightgrey?style=for-the-badge" alt="No external dependencies"/>
-</p>---
-
-📌 Table of Contents
-
-- "Overview" (#-overview)
-- "Features" (#-features)
-- "How It Works" (#-how-it-works)
-- "Technology Stack" (#-technology-stack)
-- "Getting Started" (#-getting-started)
-- "Usage" (#-usage)
-- "Running Tests" (#-running-tests)
-- "Project Structure" (#-project-structure)
-- "Limitations" (#-limitations)
-- "Future Improvements" (#-future-improvements)
-- "Learning Outcomes" (#-learning-outcomes)
-- "Author" (#-author)
-
----
-
-🎯 Overview
-
-Weak and predictable passwords can put accounts at risk. This project demonstrates the fundamentals of password-strength checking using Python.
-
-The program examines password length, character variety, and selected common patterns. It then generates a basic strength rating and suggestions to help users improve their password choices.
-
-Project goals:
-
-- Understand fundamental password-security concepts.
-- Practise Python functions, loops, conditions, and string operations.
-- Learn automated testing with Python's "unittest" module.
-- Develop good coding and documentation habits.
+A beginner-friendly Python tool that evaluates password characteristics, flags some predictable patterns, and provides suggestions for improvement.
 
 ✨ Features
 
-Feature| Description
-📏 Length analysis| Rewards longer passwords according to the program's rules.
-🔠 Uppercase detection| Checks for uppercase letters.
-🔡 Lowercase detection| Checks for lowercase letters.
-🔢 Number detection| Checks for numeric characters.
-🔣 Special-character detection| Checks for punctuation characters.
-🚩 Pattern detection| Flags selected patterns such as "password", "qwerty", "admin", and "123".
-📊 Strength rating| Displays Weak, Moderate, or Strong.
-💡 Improvement tips| Suggests which basic checks need attention.
-🔁 Repeated testing| Allows multiple checks in one session.
-🧪 Automated tests| Tests expected behaviour using Python's built-in testing framework.
+- 🔐 Hidden password input using "getpass"
+- 🛡️ Password strength classification
+- 🔎 Basic detection of repeated characters and predictable sequences
+- 💡 Suggestions for improving weak passwords
+- 🧪 Automated tests using Python's "unittest"
+- 💻 Color-coded terminal output
 
-⚙️ How It Works
+🧰 Technology
 
-The checker follows a simple workflow:
+- Python
+- "getpass"
+- "string"
+- "unittest"
 
-      START
-        |
-        v
- Enter a test password
-        |
-        v
- Check length and character types
-        |
-        v
- Look for selected common patterns
-        |
-        v
- Calculate rule-based score
-        |
-        v
- Assign a strength rating
-        |
-        v
- Display suggestions and report
-        |
-        v
- Repeat or exit
+⚠️ Limitations
 
-Scoring logic
+This project uses simple rules and pattern checks. It does not guarantee that a password is secure, detect every common password, or replace a dedicated password-strength estimation tool. Test only with fake passwords; never enter your real password into this learning project.
 
-The current implementation awards:
+🎯 Learning outcomes
 
-- 2 points for a length of 12 or more characters.
-- 1 point for a length of 8–11 characters.
-- 1 point each for uppercase letters, lowercase letters, digits, and punctuation.
-
-The maximum score is 6 points.
-
-The program limits the score when selected common patterns are detected. A password shorter than eight characters is always rated Weak.
-
-The rating thresholds are defined in the source code. The score is a simplified educational metric, not a measurement of true password entropy.
-
-🧰 Technology Stack
-
-- Python 3 — core programming language.
-- "string" — standard-library punctuation characters.
-- "unittest" — automated tests.
-- Git and GitHub — version control and project hosting.
-- Visual Studio Code — development environment.
-
-No third-party Python packages are required.
-
-🚀 Getting Started
-
-Prerequisites
-
-Install Python 3 and Git. A code editor such as Visual Studio Code is recommended.
-
-Check your installations:
-
-python --version
-git --version
-
-Installation
-
-1. Clone the repository
-
-Replace "YOUR_GITHUB_USERNAME" with your GitHub username.
-
-git clone https://github.com/YOUR_GITHUB_USERNAME/password-strength-checker.git
-
-2. Enter the project directory
-
-cd password-strength-checker
-
-3. Run the program
-
-python password_checker.py
-
-On Windows, if the "python" command is unavailable, try "py password_checker.py".
-
-💻 Usage
-
-When the program starts, enter a fictional test password.
-
-Example:
-
+- Python functions and conditionals
+- String processing
+- Password hygiene concepts
+- Unit testing
+- Git and GitHub version control
 ======================================
       PASSWORD STRENGTH CHECKER
 ======================================
