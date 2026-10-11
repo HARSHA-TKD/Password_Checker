@@ -1,10 +1,13 @@
-!["Python" (https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+!["Python" (https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)]
 
-"Cybersecurity" (https://img.shields.io/badge/Cybersecurity-Password%20Analysis-00BFFF?style=for-the-badge)
+!["Cybersecurity" (https://img.shields.io/badge/Cybersecurity-Password%20Analysis-00BFFF?style=for-the-badge)]
 
-"Tests" (https://img.shields.io/badge/Tests-Unittest-2E8B57?style=for-the-badge)
+!["Tests" (https://img.shields.io/badge/Tests-Unittest-2E8B57?style=for-the-badge)]
 
-"Status" (https://img.shields.io/badge/Status-Learning%20Project-708090?style=for-the-badge)]
+!["Status" (https://img.shields.io/badge/Status-Learning%20Project-708090?style=for-the-badge)]
+
+
+PASSWORD STRENGTH CHECKER 
 A beginner-friendly Python tool that evaluates password characteristics, flags some predictable patterns, and provides suggestions for improvement.
 
 ✨ Features
