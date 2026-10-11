@@ -82,37 +82,58 @@ def check_password(password):
 
 
 def main():
-    print("=" * 38)
-    print("      PASSWORD STRENGTH CHECKER")
-    print("=" * 38)
+    BLUE = "\033[94m"
+    CYAN = "\033[96m"
+    SILVER = "\033[37m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    RED = "\033[91m"
+    RESET = "\033[0m"
+
+    print(f"\n{BLUE}" + "=" * 44)
+    print("       PASSWORD SECURITY CHECKER")
+    print("          CYBERSECURITY TOOL")
+    print("=" * 44 + f"{RESET}")
+
+    print(f"{SILVER}Password input is hidden for privacy.")
     print("Use a fake password for testing.")
-    print("Type 'exit' to quit.\n")
+    print(f"Type 'exit' to quit.{RESET}\n")
 
     while True:
-        password = getpass("Enter a test password: ")
+        password = getpass(f"{CYAN}Enter test password: {RESET}")
 
         if password.lower() == "exit":
-            print("Thanks for using the checker!")
+            print(f"\n{BLUE}Session closed. Stay secure!{RESET}\n")
             break
 
         if not password:
-            print("Please enter a password to check.\n")
+            print(f"{YELLOW}Please enter a password.{RESET}\n")
             continue
 
         strength, score, suggestions = check_password(password)
 
-        print("\n--- SECURITY REPORT ---")
-        print("Strength :", strength)
-        print("Score    :", str(score) + "/6")
+        if strength == "Strong":
+            color = GREEN
+        elif strength == "Moderate":
+            color = YELLOW
+        else:
+            color = RED
+
+        print(f"\n{BLUE}" + "-" * 44)
+        print("              SECURITY REPORT")
+        print("-" * 44 + f"{RESET}")
+
+        print(f"Strength : {color}{strength}{RESET}")
+        print(f"Score    : {CYAN}{score}/6{RESET}")
 
         if suggestions:
-            print("\nSuggestions:")
+            print(f"\n{YELLOW}Suggestions:{RESET}")
             for suggestion in suggestions:
-                print("-", suggestion)
+                print(f"  - {suggestion}")
         else:
-            print("All basic character checks passed.")
+            print(f"{GREEN}All basic character checks passed.{RESET}")
 
-        print("-" * 38 + "\n")
+        print(f"{BLUE}" + "-" * 44 + f"{RESET}\n")
 
 
 if __name__ == "__main__":
