@@ -1,5 +1,28 @@
 import string
+from getpass import getpass
+def has_weak_pattern(password):
+    password = password.lower()
 
+    # Check for repeated characters, e.g. aaaaa
+    if len(password) >= 4:
+        for i in range(len(password) - 3):
+            if len(set(password[i:i + 4])) == 1:
+                return True
+
+    # Check for common sequences, e.g. abcd or 1234
+    sequences = [
+        "abcdefghijklmnopqrstuvwxyz",
+        "0123456789",
+        "qwertyuiop"
+    ]
+
+    for sequence in sequences:
+        for i in range(len(sequence) - 3):
+            pattern = sequence[i:i + 4]
+            if pattern in password:
+                return True
+
+    return False
 
 def check_password(password):
     score = 0
@@ -35,11 +58,16 @@ def check_password(password):
         suggestions.append("Add a special character (e.g. !, @, #).")
 
     # Check for common weak patterns
-    common_patterns = ["123", "password", "qwerty", "admin"]
-    if any(pattern in password.lower() for pattern in common_patterns):
+    common_patterns = ["password", "qwerty", "admin"]
+
+    if (
+        any(pattern in password.lower() for pattern in common_patterns)
+        or "123" in password
+        or has_weak_pattern(password)
+    ):
         score = min(score, 2)
         suggestions.append(
-            "Avoid common words and predictable sequences."
+            "Avoid common words, repeated characters, and sequences."
         )
 
     # Assign a strength rating
@@ -61,7 +89,7 @@ def main():
     print("Type 'exit' to quit.\n")
 
     while True:
-        password = input("Enter a test password: ")
+        password = getpass("Enter a test password: ")
 
         if password.lower() == "exit":
             print("Thanks for using the checker!")
