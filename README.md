@@ -34,7 +34,7 @@ This project uses simple rules and pattern checks. It does not guarantee that a 
 - Git and GitHub version control
 
 ##Demo
-![Password Checker Demo](screenshots/password-checker-demo.png)
+![Password Checker Demo](password-checker-demo.png)
 
 ======================================
       PASSWORD STRENGTH CHECKER
